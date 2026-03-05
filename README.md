@@ -32,13 +32,15 @@ The implementation follows a multi-agent DQN training loop ("MultiDQN2") with th
 4. Decay learning rate (`alpha`) and exploration (`epsilon`) across episodes.
 5. Return learned Q-functions for all users.
 
-## Reported findings highlighted in the figures
+## Reported findings highlight
 
 ### DQN in random/fixed populations
 
 - In the average environment with utility preference `w = 0.5`, data-generation frequency `q = 0.3`, and automatic-opponent setting `(0.7, random)`, learned Q-values suggest sharing Category 1 is generally strong across many states.
 - In states where most Feature-1 items are already revealed, sharing Category 3 without Category 2 can produce higher reward.
 - When data is more scarce (`q = 0.2`), the best actions shift toward higher-sharing strategies, consistent with the hypothesis that users share more when available data is limited.
+
+<img src="plots/q2.png" alt="Q-values as a function of before and after states when there are two groups" width="1000">
 
 ### DQN in strategic populations (two groups)
 
